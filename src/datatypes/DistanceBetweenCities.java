@@ -14,6 +14,10 @@ public class DistanceBetweenCities {
 
         double distance = Math.sqrt(Math.pow((x2-x1),2) + Math.pow((y2-y1),2));
 
-        System.out.println(distance);
+        double z1 = (x1 + x2) / 2;
+        double z2 = (y1 + y2) / 2;
+
+        System.out.println("Distance between two cities is: "+distance);
+        System.out.println("Coordinates of middle point between two cities: "+"( "+z1+", "+z2+" )");
     }
 }

@@ -11,6 +11,7 @@ public class NameOfTheWeek {
 
         if(day < 1 || day > 7){
             System.out.println("Not a day of week");
+            return;
         }
 
         switch (day) {
