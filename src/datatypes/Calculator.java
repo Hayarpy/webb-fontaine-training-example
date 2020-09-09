@@ -4,17 +4,13 @@ import java.util.Scanner;
 
 public class Calculator {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter two numbers and Math operation:");
         float num1 = scanner.nextFloat();
         float num2 = scanner.nextFloat();
         char symbol = scanner.next().charAt(0);
-
         double result;
-
-        switch(symbol)
-        {
+        switch (symbol) {
             case '+':
                 result = num1 + num2;
                 break;
@@ -25,7 +21,12 @@ public class Calculator {
                 result = num1 * num2;
                 break;
             case '/':
-                result = num1 / num2;
+                if (num2 == 0) {
+                    System.out.println("Operation not possible");
+                    return;
+                } else {
+                    result = num1 / num2;
+                }
                 break;
             case '%':
                 result = num1 % num2;
@@ -34,11 +35,6 @@ public class Calculator {
                 System.out.println("Error! operator is not correct");
                 return;
         }
-
-        if(num2 == 0 && symbol == '/'){
-            System.out.println("Operation not possible");
-        } else {
-            System.out.println(num1+" "+symbol+" "+num2+" = "+result);
-        }
+        System.out.println(num1 + " " + symbol + " " + num2 + " = " + result);
     }
 }
