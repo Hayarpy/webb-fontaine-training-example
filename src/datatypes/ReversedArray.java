@@ -2,7 +2,7 @@ package datatypes;
 
 import java.util.Scanner;
 
-public class DataTypesDemo {
+public class ReversedArray {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
