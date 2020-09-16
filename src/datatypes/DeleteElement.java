@@ -27,7 +27,12 @@ public class DeleteElement {
             if(i == index){
                 continue;
             }
-            System.out.print(array[i]+" ");
+        }
+        int [] newArray = new int[n-1];
+
+        for(int i = 0; i < array.length - 1; i++){
+            newArray[i] = array[i];
+            System.out.print(newArray[i]+" ");
         }
     }
 }
